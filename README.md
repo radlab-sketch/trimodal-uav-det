@@ -2,6 +2,9 @@
 
 Tri-modal object detection using RGB, thermal, and event camera data.
 
+## Dataset Link
+https://drive.google.com/file/d/1w71v6n41yqjP7BCr9ni4JdcxMnQ2ocR0/
+
 ## Overview
 
 TriModalDet is a tri-modal object detection framework that processes RGB, thermal, and event camera inputs through MAGE+BiTE fusion mechanisms. The architecture combines hierarchical feature extraction with modality-aware gating to improve detection performance across varying environmental conditions.
