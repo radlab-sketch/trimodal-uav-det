@@ -2,6 +2,10 @@
 
 Tri-modal object detection using RGB, thermal, and event camera data.
 
+<p align="center">
+  <img src="dataset.png" alt="Tri-modal UAV dataset examples" width="900"/>
+</p>
+
 ## Dataset Link
 https://drive.google.com/file/d/1w71v6n41yqjP7BCr9ni4JdcxMnQ2ocR0/
 
