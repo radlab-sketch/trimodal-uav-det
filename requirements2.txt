@@ -1,0 +1,29 @@
+# TriModalDet 依赖（requirements2.txt）
+
+# PyTorch + CUDA 12.8（必须通过 pip 安装，指定 index-url）
+# pip install torch==2.9.1+cu128 torchvision==0.24.1+cu128 torchaudio==2.9.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+# 或直接使用：pip install -r requirements2.txt --index-url https://download.pytorch.org/whl/cu128
+torch==2.9.1+cu128
+torchvision==0.24.1+cu128
+torchaudio==2.9.1+cu128
+
+# 核心依赖
+numpy>=1.26.0
+matplotlib>=3.8.0
+scikit-learn>=1.4.0
+
+# 模型组件
+timm>=1.0.0
+
+# 评估指标
+torchmetrics>=1.4.0
+
+# COCO 格式评估
+pycocotools>=2.0.7
+
+# 数据可视化（项目代码中 try/except 导入，但建议安装）
+Pillow>=10.0
+opencv-python>=4.9.0
+
+# 进度条
+tqdm>=4.60.0
