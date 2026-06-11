@@ -74,10 +74,10 @@ class NpyYoloDataset(Dataset):
         return len(self.image_files)
 
     def __getitem__(self, idx):
-        # Load image
+        # Load image with memory mapping to reduce RAM usage
         img_path = os.path.join(self.image_dir, self.image_files[idx])
-        image = np.load(img_path)
-        image_tensor = torch.from_numpy(image).float()
+        image = np.load(img_path, mmap_mode='r')
+        image_tensor = torch.from_numpy(np.array(image)).float()
 
         # Permute from (H, W, C) to (C, H, W) if necessary
         if image_tensor.ndim == 3 and image_tensor.shape[-1] == 5:
