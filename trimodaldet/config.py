@@ -94,6 +94,12 @@ class Config:
         self.enable_oom_protection = True
         self.check_interval_batches = 50
 
+        # Gradient accumulation
+        self.grad_accumulation_steps = 1  # 1 = no accumulation
+
+        # AMP (Automatic Mixed Precision)
+        self.use_amp = False
+
     @classmethod
     def from_args(cls):
         """Create config from command line arguments."""
@@ -117,6 +123,10 @@ class Config:
         parser.add_argument("--epochs", type=int, default=15, help="Number of training epochs")
         parser.add_argument("--batch-size", type=int, default=16, help="Batch size for training")
         parser.add_argument("--lr", type=float, default=0.02, help="Learning rate")
+        parser.add_argument("--grad-accumulation-steps", type=int, default=1,
+                          help="Gradient accumulation steps (1 = disabled)")
+        parser.add_argument("--use-amp", action="store_true", default=False,
+                          help="Enable Automatic Mixed Precision (AMP) training")
 
         # Monitoring arguments
         parser.add_argument("--monitor-interval", type=float, default=5.0,
@@ -160,6 +170,12 @@ class Config:
         config.max_gpu_mem_pct = args.max_gpu_mem_pct
         config.enable_oom_protection = args.enable_oom_protection
         config.check_interval_batches = args.check_interval_batches
+
+        # Gradient accumulation
+        config.grad_accumulation_steps = args.grad_accumulation_steps
+
+        # AMP
+        config.use_amp = args.use_amp
 
         config.args = args
         return config
