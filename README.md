@@ -7,7 +7,7 @@ Tri-modal object detection using RGB, thermal, and event camera data.
 </p>
 
 ## Dataset Link
-https://drive.google.com/file/d/1w71v6n41yqjP7BCr9ni4JdcxMnQ2ocR0/
+https://drive.google.com/drive/folders/1U2NJQMRz8uP8e-z9lCguRWVPWpXs4MmB
 
 ## Overview
 
