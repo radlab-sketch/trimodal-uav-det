@@ -9,6 +9,10 @@ Tri-modal object detection using RGB, thermal, and event camera data.
 ## Dataset Link
 https://drive.google.com/drive/folders/1U2NJQMRz8uP8e-z9lCguRWVPWpXs4MmB
 
+## Dataset Notes
+
+- The annotation files contain **30,634** vehicle boxes in 9,751 label files (9,750 non-empty). The paper reports 24,223, which equals their total line count: the 6,411 non-empty `nframe_*.txt` files have no trailing newline, so a line count misses one box in each.
+
 ## Overview
 
 TriModalDet is a tri-modal object detection framework that processes RGB, thermal, and event camera inputs through MAGE+BiTE fusion mechanisms. The architecture combines hierarchical feature extraction with modality-aware gating to improve detection performance across varying environmental conditions.
